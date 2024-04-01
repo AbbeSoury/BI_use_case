@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: Snowflake_entrepot
+    description: 'Cloud trial Snowflake'
+    database: PC_DBT_DB
+    schema: DBT_JPRUGNIAUD
+    tables:
+      - name: ALLOCATIONS_VS_RDV
+      - name: CENTRES_VACCINATIONS
+      - name: DIM_FRANCE_REG_DPT_ZIP
+      - name: PRISE_RDV_PAR_CENTRE
+      - name: STOCK
+
+
