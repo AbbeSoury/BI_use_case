@@ -1,3 +1,4 @@
+{{ config(materialized='table') }}
 select
     CODE_DEPARTEMENT,
     DEPARTEMENT,
@@ -8,4 +9,4 @@ select
     NB_UCD,
     NB_DOSES,
     DATE
-from PC_DBT_DB.DBT_JPRUGNIAUD.STOCK
+from {{ source('raw','STOCK')}}

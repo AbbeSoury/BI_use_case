@@ -1,3 +1,4 @@
+{{ config(materialized='table') }}
 select
     GID,
     NOM,
@@ -42,4 +43,4 @@ select
     CENTRE_FERMETURE,
     RESERVE_PROFESSIONELS_SANTE,
     CENTRE_TYPE
-from PC_DBT_DB.DBT_JPRUGNIAUD.CENTRES_VACCINATIONS
+from {{ source('raw','CENTRES_VACCINATIONS')}}

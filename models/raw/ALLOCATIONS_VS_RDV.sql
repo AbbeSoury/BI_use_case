@@ -1,3 +1,4 @@
+{{ config(materialized='table') }}
 select
     ID_CENTRE,
     DATE_DEBUT_SEMAINE,
@@ -10,4 +11,4 @@ select
     NOMBRE_UCD,
     DOSES_ALLOUEES,
     RDV_PRIS
-from PC_DBT_DB.DBT_JPRUGNIAUD.ALLOCATIONS_VS_RDV
+from {{ source('raw','ALLOCATIONS_VS_RDV')}}

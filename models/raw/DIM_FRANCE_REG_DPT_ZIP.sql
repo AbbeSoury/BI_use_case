@@ -1,3 +1,4 @@
+{{ config(materialized='table') }}
 select
     CODE_COMMUNE_INSEE,
     NOM_COMMUNE_POSTAL,
@@ -14,4 +15,4 @@ select
     NOM_DEPARTEMENT,
     CODE_REGION,
     NOM_REGION
-from PC_DBT_DB.DBT_JPRUGNIAUD.DIM_FRANCE_REG_DPT_ZIP
+from {{ source('raw','DIM_FRANCE_REG_DPT_ZIP')}}

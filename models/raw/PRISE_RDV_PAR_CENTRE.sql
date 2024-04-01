@@ -1,3 +1,4 @@
+{{ config(materialized='table') }}
 select
     CODE_REGION,
     REGION,
@@ -9,4 +10,4 @@ select
     NB,
     NB_RDV_CNAM,
     NB_RDV_RAPPEL
-from PC_DBT_DB.DBT_JPRUGNIAUD.PRISE_RDV_PAR_CENTRE
+from {{ source('raw','PRISE_RDV_PAR_CENTRE')}}
