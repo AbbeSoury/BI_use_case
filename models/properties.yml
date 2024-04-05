@@ -11,5 +11,6 @@ sources:
       - name: DIM_FRANCE_REG_DPT_ZIP
       - name: PRISE_RDV_PAR_CENTRE
       - name: STOCK
+      - name: VACCINATION_PAR_LIEU
 
 
