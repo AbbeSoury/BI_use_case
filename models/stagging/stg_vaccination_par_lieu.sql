@@ -6,4 +6,4 @@ select
     libelle_categorie as "Nom de la catégorie", 
     effectif_inj_categorie as "Nombre d'injection", 
     effectif_inj_toutes_categories as "Nombre d'injection toute catégorie"
-from {{ ref('VACCINATION_PAR_LIEU')}}
+FROM {{ source('raw', 'VACCINATION_PAR_LIEU') }}
