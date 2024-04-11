@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: Snowflake_entrepot
+  - name: raw
     description: 'Cloud trial Snowflake'
     database: PC_DBT_DB
     schema: DBT_JPRUGNIAUD
@@ -11,5 +11,6 @@ sources:
       - name: DIM_FRANCE_REG_DPT_ZIP
       - name: PRISE_RDV_PAR_CENTRE
       - name: STOCK
+      - name: VACCINATION_PAR_LIEU
 
 
